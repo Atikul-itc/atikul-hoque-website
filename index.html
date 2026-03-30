@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atikul Hoque | Remote Sensing & Dryland Ecology</title>
+  <meta name="description" content="PhD Candidate at NMSU studying shrub encroachment in dryland ecosystems using remote sensing, deep learning, and multi-sensor data fusion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ───────────────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">AH</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="mailto:atikul@nmsu.edu" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="dot"></span>PhD Candidate · NMSU · Las Cruces, NM</div>
+      <h1 class="hero-name">Atikul<br /><em>Hoque</em></h1>
+      <p class="hero-tagline">
+        Decoding dryland landscapes — pixel by pixel.<br />
+        I map shrub encroachment across global drylands using remote sensing,
+        deep learning, and multi-sensor fusion.
+      </p>
+      <div class="hero-links">
+        <a href="#research" class="btn btn-primary">Explore Research</a>
+        <a href="https://scholar.google.com/citations?user=0AgT_FwAAAAJ&hl=en" target="_blank" class="btn btn-ghost">Google Scholar ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Manuscripts</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="10">0</span><span class="stat-label">Conferences</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Published Papers</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <div class="photo-placeholder">
+          <div class="photo-placeholder-inner">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <p>Photo coming soon</p>
+          </div>
+        </div>
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label"><span class="mono">01 /</span> About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">From satellite orbits<br /><em>to ground truth</em></h2>
+          <p>I am a PhD Candidate in Geography and Environmental Studies at New Mexico State University, where I work with Dr. Michaela Buenemann at the Spatial Application Research Center (SpARC). My research sits at the intersection of remote sensing, machine learning, and dryland ecology.</p>
+          <p>My dissertation focuses on developing novel deep learning and multi-sensor approaches — including hybrid CNN-MLP architectures and attention-based fusion networks — to map and monitor <strong>shrub/woody plant encroachment</strong> in arid and semi-arid ecosystems. I work extensively with Sentinel-1, Sentinel-2, NAIP, and PlanetScope imagery, and I conduct field campaigns as an <strong>FAA-certified remote pilot</strong> using UAS platforms and spectroradiometers.</p>
+          <p>Before NMSU, I earned my MSc from the Faculty of Geo-Information Science and Earth Observation (ITC) at the University of Twente, The Netherlands, and interned at the German Aerospace Center (DLR) in Munich.</p>
+          <div class="about-tags">
+            <span class="tag">Remote Sensing</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Dryland Ecology</span>
+            <span class="tag">Shrub Encroachment</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag">SAR & Optical Fusion</span>
+            <span class="tag">Phenology</span>
+            <span class="tag">UAS / Drone Mapping</span>
+          </div>
+        </div>
+        <div class="about-side">
+          <div class="about-card">
+            <div class="about-card-icon">🎓</div>
+            <div>
+              <div class="about-card-title">PhD Candidate</div>
+              <div class="about-card-sub">Geography &amp; Environmental Studies<br />NMSU · 2022–Present · GPA 3.98</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌍</div>
+            <div>
+              <div class="about-card-title">MSc Natural Resource Management</div>
+              <div class="about-card-sub">ITC, University of Twente<br />The Netherlands · 2020–2022</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🗺️</div>
+            <div>
+              <div class="about-card-title">BSc Geography &amp; Environmental Studies</div>
+              <div class="about-card-sub">University of Chittagong<br />Bangladesh · 2015–2019</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">✈️</div>
+            <div>
+              <div class="about-card-title">FAA-Certified Remote Pilot</div>
+              <div class="about-card-sub">Small Unmanned Aircraft Systems (sUAS)<br />2023–Present</div>
+            </div>
+          </div>
+          <div class="field-photo-placeholder">
+            <div class="field-tag mono">field work / Jornada Experimental Range</div>
+            <div class="field-img-slot">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <p class="mono" style="font-size:0.7rem;margin-top:0.5rem;">Add field photo here<br /><code>images/field-1.jpg</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESEARCH ──────────────────────────────────────────────────────── -->
+  <section class="section section-dark" id="research">
+    <div class="container">
+      <div class="section-label"><span class="mono">02 /</span> Research</div>
+      <h2 class="section-title">Current Research<br /><em>Threads</em></h2>
+      <p class="section-intro">My dissertation comprises four interconnected studies on mapping shrub encroachment — from classification to fractional cover to phenological timing.</p>
+
+      <div class="research-grid">
+
+        <div class="research-card" data-index="1">
+          <div class="research-card-num mono">Paper I</div>
+          <div class="research-card-badge badge-review">Under Review</div>
+          <h3>Global Review: Remote Sensing of Shrub Encroachment</h3>
+          <p>A systematic review of advances in remote sensing-based mapping of shrub/woody plant encroachment across global drylands — synthesizing sensors, methods, and knowledge gaps from pixels to landscapes.</p>
+          <div class="research-card-meta">
+            <span class="tag-sm">Review</span>
+            <span class="tag-sm">Drylands</span>
+            <span class="tag-sm">Multi-sensor</span>
+          </div>
+          <div class="research-img-slot">
+            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper1-fig.jpg</code></span>
+          </div>
+        </div>
+
+        <div class="research-card" data-index="2">
+          <div class="research-card-num mono">Paper II</div>
+          <div class="research-card-badge badge-review">Under Review</div>
+          <h3>Hybrid CNN-MLP for Vegetation Cover Classification</h3>
+          <p>A novel hybrid CNN-MLP deep learning framework for accurately classifying photosynthetic vegetation (PV), non-photosynthetic vegetation (NPV), and bare soil in UAS hyperspectral imagery of mesquite-encroached rangelands at the Jornada Experimental Range.</p>
+          <div class="research-card-meta">
+            <span class="tag-sm">Deep Learning</span>
+            <span class="tag-sm">CNN-MLP</span>
+            <span class="tag-sm">UAS</span>
+            <span class="tag-sm">Hyperspectral</span>
+          </div>
+          <div class="research-img-slot">
+            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper2-fig.jpg</code></span>
+          </div>
+        </div>
+
+        <div class="research-card" data-index="3">
+          <div class="research-card-num mono">Paper III</div>
+          <div class="research-card-badge badge-review">Under Review</div>
+          <h3>Sentinel-1 &amp; -2 Fusion for Fractional Shrub Cover Mapping</h3>
+          <p>An attention-based fusion CNN that integrates Sentinel-1 SAR and Sentinel-2 multispectral data for percent cover mapping of shrubs at landscape scale, using classification outputs from Paper II as reference data.</p>
+          <div class="research-card-meta">
+            <span class="tag-sm">SAR–Optical Fusion</span>
+            <span class="tag-sm">Attention CNN</span>
+            <span class="tag-sm">Sentinel-1/2</span>
+          </div>
+          <div class="research-img-slot">
+            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper3-fig.jpg</code></span>
+          </div>
+        </div>
+
+        <div class="research-card" data-index="4">
+          <div class="research-card-num mono">Paper IV</div>
+          <div class="research-card-badge badge-progress">In Progress</div>
+          <h3>Optimal Phenological Window for Shrub Mapping</h3>
+          <p>Examining how multi-temporal satellite time-series data can reveal the optimal phenological window for distinguishing shrub species and cover fractions — leveraging seasonal dynamics to maximize mapping accuracy.</p>
+          <div class="research-card-meta">
+            <span class="tag-sm">Phenology</span>
+            <span class="tag-sm">Time Series</span>
+            <span class="tag-sm">Sentinel-2</span>
+          </div>
+          <div class="research-img-slot">
+            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper4-fig.jpg</code></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Field photo strip -->
+      <div class="field-strip">
+        <div class="field-strip-label mono">field / lab</div>
+        <div class="field-strip-photos">
+          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-2.jpg</code></span></div>
+          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-3.jpg</code></span></div>
+          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-4.jpg</code></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PUBLICATIONS ─────────────────────────────────────────────────── -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section-label"><span class="mono">03 /</span> Publications</div>
+      <h2 class="section-title">Published &amp;<br /><em>In Review</em></h2>
+
+      <div class="pub-filters">
+        <button class="pub-filter active" data-filter="all">All</button>
+        <button class="pub-filter" data-filter="review">Under Review</button>
+        <button class="pub-filter" data-filter="journal">Journal Articles</button>
+        <button class="pub-filter" data-filter="thesis">Thesis</button>
+      </div>
+
+      <div class="pub-list">
+
+        <!-- Under Review -->
+        <div class="pub-item" data-type="review">
+          <div class="pub-year mono">2025</div>
+          <div class="pub-body">
+            <div class="pub-status badge-review-sm">Under Review</div>
+            <p class="pub-title">From pixels to landscapes: Advances in remote sensing-based mapping of shrub encroachment in global drylands</p>
+            <p class="pub-authors"><strong>Hoque, A.</strong>, &amp; Buenemann, M.</p>
+            <p class="pub-journal italic">Review manuscript — to be submitted</p>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="review">
+          <div class="pub-year mono">2025</div>
+          <div class="pub-body">
+            <div class="pub-status badge-review-sm">Under Review</div>
+            <p class="pub-title">A hybrid CNN-MLP approach for classifying photosynthetic vegetation, non-photosynthetic vegetation, and soil in mesquite-encroached rangelands</p>
+            <p class="pub-authors"><strong>Hoque, A.</strong>, &amp; Buenemann, M.</p>
+            <p class="pub-journal italic">Research manuscript — to be submitted</p>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="review">
+          <div class="pub-year mono">2025</div>
+          <div class="pub-body">
+            <div class="pub-status badge-review-sm">Under Review</div>
+            <p class="pub-title">Sentinel-1 and Sentinel-2 data fusion with an attention-based CNN for fractional cover mapping of shrubs in drylands</p>
+            <p class="pub-authors"><strong>Hoque, A.</strong>, &amp; Buenemann, M.</p>
+            <p class="pub-journal italic">Research manuscript — to be submitted</p>
+          </div>
+        </div>
+
+        <!-- Published -->
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2026</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Assessing spatial variability of Boro rice (<em>Oryza sativa</em> L.) phenology across different climatic zones in Bangladesh using Sentinel-1 and -2 time series data</p>
+            <p class="pub-authors">Hoque, A., Mahmud, A., Rashid, K. J., &amp; Biswas, R. N.</p>
+            <p class="pub-journal italic">Agricultural Research, 1–24.</p>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2026</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Integrating field camera imagery for monitoring maize phenology, biophysical traits, and agroclimatic factors in smallholder farms</p>
+            <p class="pub-authors">Mahmud, A., Hoque, A., Tuure, J., Alakukku, L., Mäkelä, P. S., Wachiye, S., … &amp; Heiskanen, J.</p>
+            <p class="pub-journal italic">Computers and Electronics in Agriculture, 240, 111161.</p>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2024</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Water, sanitation, and hygiene conditions and health outcomes: A comparative study between Rohingya refugees and local people in southeastern Bangladesh</p>
+            <p class="pub-authors">Paul, A., <strong>Hoque, A.</strong>, Mahmud, A., Esha, T. A., Rashid, K. J., Paul, B., … &amp; Nath, T. K.</p>
+            <p class="pub-journal italic">The Dhaka University Journal of Earth and Environmental Sciences, 13(1), 47–58.</p>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2021</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Spatiotemporal changes of vegetation and land surface temperature in the refugee camps and surrounding areas of Bangladesh after the Rohingya influx from Myanmar</p>
+            <p class="pub-authors">Rashid, K. J., <strong>Hoque, A.</strong>, Esha, T. A., Rahman, M. A., &amp; Paul, A.</p>
+            <p class="pub-journal italic">Environment, Development and Sustainability, 23, 3562–3577.</p>
+            <a href="https://doi.org/10.1007/s10668-020-00733-x" target="_blank" class="pub-doi">DOI ↗</a>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="thesis">
+          <div class="pub-year mono">2022</div>
+          <div class="pub-body">
+            <div class="pub-status badge-thesis-sm">Thesis</div>
+            <p class="pub-title">Variability of wheat phenology from Sentinel-1 and -2 time series: A case study for Brandenburg, Germany</p>
+            <p class="pub-authors"><strong>Hoque, A.</strong></p>
+            <p class="pub-journal italic">MSc Thesis, University of Twente, Enschede, The Netherlands.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scholar-cta">
+        <a href="https://scholar.google.com/citations?user=0AgT_FwAAAAJ&hl=en" target="_blank" class="btn btn-outline">View full profile on Google Scholar ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TEACHING ──────────────────────────────────────────────────────── -->
+  <section class="section section-dark" id="teaching">
+    <div class="container">
+      <div class="section-label"><span class="mono">04 /</span> Teaching</div>
+      <h2 class="section-title">Teaching &amp;<br /><em>Mentorship</em></h2>
+      <p class="section-intro">I believe in hands-on, tool-driven GIS education. I currently serve as Instructor of Record for two courses at NMSU and have supported graduate teaching across several courses since 2023.</p>
+
+      <div class="teaching-grid">
+        <div class="teaching-card featured">
+          <div class="teaching-badge mono">Instructor of Record</div>
+          <h3>Maps and GIScience</h3>
+          <div class="teaching-meta mono">GEOG · Undergraduate · Spring 2026</div>
+          <p>An introductory undergraduate course covering cartographic principles, geographic information systems, and the broad applications of GIS across disciplines — from ecology to urban planning. Students gain hands-on experience with industry-standard tools.</p>
+          <div class="teaching-tools">
+            <span class="tool-tag">ArcGIS Online</span>
+            <span class="tool-tag">ArcGIS Pro</span>
+          </div>
+        </div>
+
+        <div class="teaching-card featured">
+          <div class="teaching-badge mono">Instructor of Record</div>
+          <h3>Independent Study — GIS Fundamentals</h3>
+          <div class="teaching-meta mono">GEOG · Undergraduate · Spring 2026</div>
+          <p>One-on-one mentorship guiding an undergraduate student through GIS fundamentals and applied spatial analysis, with a focus on practical workflows and project-based learning.</p>
+          <div class="teaching-tools">
+            <span class="tool-tag">ArcGIS Online</span>
+            <span class="tool-tag">ArcGIS Pro</span>
+          </div>
+        </div>
+
+        <div class="teaching-card">
+          <div class="teaching-badge mono">Graduate Teaching Assistant</div>
+          <h3>Courses Supported</h3>
+          <div class="teaching-meta mono">NMSU · 2023–Present</div>
+          <ul class="teaching-list">
+            <li>Programming for GIS</li>
+            <li>Advanced Remote Sensing</li>
+            <li>Cartography and GIS</li>
+          </ul>
+          <p style="margin-top:1rem;">Responsibilities include grading, technical troubleshooting, software support, and student mentorship across undergraduate and graduate courses.</p>
+        </div>
+
+        <div class="teaching-card">
+          <div class="teaching-badge mono">Prior Experience</div>
+          <h3>University of Chittagong</h3>
+          <div class="teaching-meta mono">Bangladesh · 2019–2020</div>
+          <ul class="teaching-list">
+            <li>Remote Sensing &amp; Satellite Imagery <em>(Instructor of Record)</em></li>
+            <li>Geographic Information System <em>(Lab Instructor)</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CV ────────────────────────────────────────────────────────────── -->
+  <section class="section" id="cv">
+    <div class="container">
+      <div class="section-label"><span class="mono">05 /</span> CV</div>
+      <div class="cv-block">
+        <div class="cv-left">
+          <h2 class="section-title">Curriculum<br /><em>Vitae</em></h2>
+          <p>My full academic CV covers my research experience, teaching, publications, conference presentations, awards, and technical skills.</p>
+          <a href="CV_Atikul_Hoque_2026.pdf" download class="btn btn-primary" id="cv-download">Download CV (PDF) ↓</a>
+          <p class="cv-note mono">Last updated: March 2026</p>
+        </div>
+        <div class="cv-highlights">
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">3.98</div>
+            <div class="cv-h-label">PhD GPA</div>
+          </div>
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">7</div>
+            <div class="cv-h-label">Conf. Presentations</div>
+          </div>
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">3</div>
+            <div class="cv-h-label">Awards &amp; Prizes</div>
+          </div>
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">10+</div>
+            <div class="cv-h-label">Scholarships &amp; Grants</div>
+          </div>
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">4</div>
+            <div class="cv-h-label">Published Papers</div>
+          </div>
+          <div class="cv-highlight-item">
+            <div class="cv-h-num mono">3+</div>
+            <div class="cv-h-label">Years Field Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo mono">Atikul Hoque</div>
+          <p>PhD Candidate · Geography &amp; Environmental Studies<br />New Mexico State University</p>
+          <p class="mono" style="font-size:0.75rem;margin-top:0.5rem;">atikul@nmsu.edu</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=0AgT_FwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a href="https://linkedin.com/in/atikulhoq/" target="_blank">LinkedIn</a>
+          <a href="mailto:atikul@nmsu.edu">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom mono">
+        © 2026 Atikul Hoque · Built with HTML, CSS &amp; JS · Hosted on Netlify
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

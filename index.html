@@ -9,6 +9,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Additional tweaks for better blending and spacing */
+    .hero-photo-frame .photo-placeholder img {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.25);
+    }
+    .hero-photo-frame:hover .photo-placeholder img {
+      transform: scale(1.02);
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.35);
+    }
+    /* Remove corner decorations for cleaner look */
+    .hero-photo-frame .photo-corner {
+      display: none;
+    }
+    /* Adjust hero spacing so About appears higher on first page */
+    .hero {
+      min-height: 85vh;
+      padding-bottom: 2rem;
+    }
+    .hero-content {
+      margin-top: 2rem;
+    }
+    .section#about {
+      padding-top: 2rem;
+    }
+    /* research images: consistent sizing */
+    .research-img-slot img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 0.75rem;
+      object-fit: cover;
+      max-height: 160px;
+    }
+    .pub-doi {
+      display: inline-block;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      font-family: 'Space Mono', monospace;
+      color: #4a6fa5;
+      text-decoration: none;
+    }
+    .pub-doi:hover {
+      text-decoration: underline;
+    }
+    .contact-block {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,7 +71,7 @@
         <li><a href="#publications">Publications</a></li>
         <li><a href="#teaching">Teaching</a></li>
         <li><a href="#cv">CV</a></li>
-        <li><a href="mailto:atikul@nmsu.edu" class="nav-cta">Contact</a></li>
+        <li><a href="#contact-info" class="nav-cta">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -58,12 +107,9 @@
       <div class="hero-photo-frame">
         <div class="photo-placeholder">
           <img src="images/photo.jpg" alt="Atikul Hoque" 
-               style="width:100%;height:100%;object-fit:cover;border-radius:16px;" />
+               style="width:100%;height:100%;object-fit:cover;border-radius:24px; filter: brightness(0.98) contrast(1.02);" />
         </div>
-        <div class="photo-corner tl"></div>
-        <div class="photo-corner tr"></div>
-        <div class="photo-corner bl"></div>
-        <div class="photo-corner br"></div>
+        <!-- corners removed for cleaner blend -->
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -122,11 +168,12 @@
               <div class="about-card-sub">Small Unmanned Aircraft Systems (sUAS)<br />2023–Present</div>
             </div>
           </div>
-          <div class="field-photo-placeholder">
-            <div class="field-tag mono">field work</div>
+          <!-- Field photo kept but without extra strip; just a single field moment -->
+          <div class="field-photo-placeholder" style="margin-top: 1rem;">
+            <div class="field-tag mono">field work / Jornada Experimental Range</div>
             <div class="field-img-slot">
-              <img src="images/field-4.jpg" alt="Field work at Jornada Experimental Range"
-                   style="width:100%;height:200px;object-fit:cover;" />
+              <img src="images/field-1.jpg" alt="Field work at Jornada Experimental Range"
+                   style="width:100%;height:200px;object-fit:cover; border-radius: 16px;" />
             </div>
           </div>
         </div>
@@ -142,7 +189,7 @@
       <p class="section-intro">My dissertation comprises four interconnected studies on mapping shrub encroachment — from classification to fractional cover to phenological timing.</p>
 
       <div class="research-grid">
-
+        <!-- Paper I (jpg) -->
         <div class="research-card" data-index="1">
           <div class="research-card-num mono">Paper I</div>
           <div class="research-card-badge badge-review">Under Review</div>
@@ -154,10 +201,11 @@
             <span class="tag-sm">Multi-sensor</span>
           </div>
           <div class="research-img-slot">
-            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper1-fig.png</code></span>
+            <img src="images/paper1-fig.jpg" alt="Figure for shrub encroachment review" style="width:100%; border-radius: 12px; margin-top: 0.75rem;" onerror="this.style.display='none'">
           </div>
         </div>
 
+        <!-- Paper II (png) -->
         <div class="research-card" data-index="2">
           <div class="research-card-num mono">Paper II</div>
           <div class="research-card-badge badge-review">Under Review</div>
@@ -170,10 +218,11 @@
             <span class="tag-sm">Hyperspectral</span>
           </div>
           <div class="research-img-slot">
-            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper2-fig.png</code></span>
+            <img src="images/paper2-fig.png" alt="CNN-MLP architecture diagram" style="width:100%; border-radius: 12px; margin-top: 0.75rem;" onerror="this.style.display='none'">
           </div>
         </div>
 
+        <!-- Paper III (png) -->
         <div class="research-card" data-index="3">
           <div class="research-card-num mono">Paper III</div>
           <div class="research-card-badge badge-review">Under Review</div>
@@ -185,10 +234,11 @@
             <span class="tag-sm">Sentinel-1/2</span>
           </div>
           <div class="research-img-slot">
-            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper3-fig.png</code></span>
+            <img src="images/paper3-fig.png" alt="Sentinel fusion attention map" style="width:100%; border-radius: 12px; margin-top: 0.75rem;" onerror="this.style.display='none'">
           </div>
         </div>
 
+        <!-- Paper IV (png) -->
         <div class="research-card" data-index="4">
           <div class="research-card-num mono">Paper IV</div>
           <div class="research-card-badge badge-progress">In Progress</div>
@@ -200,25 +250,15 @@
             <span class="tag-sm">Sentinel-2</span>
           </div>
           <div class="research-img-slot">
-            <span class="mono" style="font-size:0.65rem;">Add figure · <code>images/paper4-fig.png</code></span>
+            <img src="images/paper4-fig.png" alt="Phenological windows analysis" style="width:100%; border-radius: 12px; margin-top: 0.75rem;" onerror="this.style.display='none'">
           </div>
         </div>
-
       </div>
-
-      <!-- Field photo strip -->
-      <div class="field-strip">
-        <div class="field-strip-label mono">field / lab</div>
-        <div class="field-strip-photos">
-          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-1.jpg</code></span></div>
-          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-2.jpg</code></span></div>
-          <div class="field-strip-slot"><span class="mono" style="font-size:0.65rem;"><code>images/field-3.jpg</code></span></div>
-        </div>
-      </div>
+      <!-- removed field strip per request -->
     </div>
   </section>
 
-  <!-- ─── PUBLICATIONS ─────────────────────────────────────────────────── -->
+  <!-- ─── PUBLICATIONS (reordered: Journal → Under Review → Thesis) ─────── -->
   <section class="section" id="publications">
     <div class="container">
       <div class="section-label"><span class="mono">03 /</span> Publications</div>
@@ -226,14 +266,58 @@
 
       <div class="pub-filters">
         <button class="pub-filter active" data-filter="all">All</button>
-        <button class="pub-filter" data-filter="review">Under Review</button>
         <button class="pub-filter" data-filter="journal">Journal Articles</button>
+        <button class="pub-filter" data-filter="review">Under Review</button>
         <button class="pub-filter" data-filter="thesis">Thesis</button>
       </div>
 
       <div class="pub-list">
+        <!-- JOURNAL ARTICLES (first) -->
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2026</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Assessing spatial variability of Boro rice (<em>Oryza sativa</em> L.) phenology across different climatic zones in Bangladesh using Sentinel-1 and -2 time series data</p>
+            <p class="pub-authors">Hoque, A., Mahmud, A., Rashid, K. J., &amp; Biswas, R. N.</p>
+            <p class="pub-journal italic">Agricultural Research, 1–24.</p>
+            <a href="https://doi.org/10.1007/s40003-025-00921-z" target="_blank" class="pub-doi">https://doi.org/10.1007/s40003-025-00921-z ↗</a>
+          </div>
+        </div>
 
-        <!-- Under Review -->
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2026</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Integrating field camera imagery for monitoring maize phenology, biophysical traits, and agroclimatic factors in smallholder farms</p>
+            <p class="pub-authors">Mahmud, A., Hoque, A., Tuure, J., Alakukku, L., Mäkelä, P. S., Wachiye, S., … &amp; Heiskanen, J.</p>
+            <p class="pub-journal italic">Computers and Electronics in Agriculture, 240, 111161.</p>
+            <a href="https://doi.org/10.1016/j.compag.2025.111161" target="_blank" class="pub-doi">https://doi.org/10.1016/j.compag.2025.111161 ↗</a>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2024</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Water, sanitation, and hygiene conditions and health outcomes: A comparative study between Rohingya refugees and local people in southeastern Bangladesh</p>
+            <p class="pub-authors">Paul, A., <strong>Hoque, A.</strong>, Mahmud, A., Esha, T. A., Rashid, K. J., Paul, B., … &amp; Nath, T. K.</p>
+            <p class="pub-journal italic">The Dhaka University Journal of Earth and Environmental Sciences, 13(1), 47–58.</p>
+            <a href="https://doi.org/10.3329/dujees.v13i1.77575" target="_blank" class="pub-doi">https://doi.org/10.3329/dujees.v13i1.77575 ↗</a>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2021</div>
+          <div class="pub-body">
+            <div class="pub-status badge-pub-sm">Published</div>
+            <p class="pub-title">Spatiotemporal changes of vegetation and land surface temperature in the refugee camps and surrounding areas of Bangladesh after the Rohingya influx from Myanmar</p>
+            <p class="pub-authors">Rashid, K. J., <strong>Hoque, A.</strong>, Esha, T. A., Rahman, M. A., &amp; Paul, A.</p>
+            <p class="pub-journal italic">Environment, Development and Sustainability, 23, 3562–3577.</p>
+            <a href="https://doi.org/10.1007/s10668-020-00733-x" target="_blank" class="pub-doi">DOI ↗</a>
+          </div>
+        </div>
+
+        <!-- UNDER REVIEW (now second) -->
         <div class="pub-item" data-type="review">
           <div class="pub-year mono">2025</div>
           <div class="pub-body">
@@ -264,48 +348,7 @@
           </div>
         </div>
 
-        <!-- Published -->
-        <div class="pub-item" data-type="journal">
-          <div class="pub-year mono">2026</div>
-          <div class="pub-body">
-            <div class="pub-status badge-pub-sm">Published</div>
-            <p class="pub-title">Assessing spatial variability of Boro rice (<em>Oryza sativa</em> L.) phenology across different climatic zones in Bangladesh using Sentinel-1 and -2 time series data</p>
-            <p class="pub-authors">Hoque, A., Mahmud, A., Rashid, K. J., &amp; Biswas, R. N.</p>
-            <p class="pub-journal italic">Agricultural Research, 1–24.</p>
-          </div>
-        </div>
-
-        <div class="pub-item" data-type="journal">
-          <div class="pub-year mono">2026</div>
-          <div class="pub-body">
-            <div class="pub-status badge-pub-sm">Published</div>
-            <p class="pub-title">Integrating field camera imagery for monitoring maize phenology, biophysical traits, and agroclimatic factors in smallholder farms</p>
-            <p class="pub-authors">Mahmud, A., Hoque, A., Tuure, J., Alakukku, L., Mäkelä, P. S., Wachiye, S., … &amp; Heiskanen, J.</p>
-            <p class="pub-journal italic">Computers and Electronics in Agriculture, 240, 111161.</p>
-          </div>
-        </div>
-
-        <div class="pub-item" data-type="journal">
-          <div class="pub-year mono">2024</div>
-          <div class="pub-body">
-            <div class="pub-status badge-pub-sm">Published</div>
-            <p class="pub-title">Water, sanitation, and hygiene conditions and health outcomes: A comparative study between Rohingya refugees and local people in southeastern Bangladesh</p>
-            <p class="pub-authors">Paul, A., <strong>Hoque, A.</strong>, Mahmud, A., Esha, T. A., Rashid, K. J., Paul, B., … &amp; Nath, T. K.</p>
-            <p class="pub-journal italic">The Dhaka University Journal of Earth and Environmental Sciences, 13(1), 47–58.</p>
-          </div>
-        </div>
-
-        <div class="pub-item" data-type="journal">
-          <div class="pub-year mono">2021</div>
-          <div class="pub-body">
-            <div class="pub-status badge-pub-sm">Published</div>
-            <p class="pub-title">Spatiotemporal changes of vegetation and land surface temperature in the refugee camps and surrounding areas of Bangladesh after the Rohingya influx from Myanmar</p>
-            <p class="pub-authors">Rashid, K. J., <strong>Hoque, A.</strong>, Esha, T. A., Rahman, M. A., &amp; Paul, A.</p>
-            <p class="pub-journal italic">Environment, Development and Sustainability, 23, 3562–3577.</p>
-            <a href="https://doi.org/10.1007/s10668-020-00733-x" target="_blank" class="pub-doi">DOI ↗</a>
-          </div>
-        </div>
-
+        <!-- THESIS (last) -->
         <div class="pub-item" data-type="thesis">
           <div class="pub-year mono">2022</div>
           <div class="pub-body">
@@ -315,7 +358,6 @@
             <p class="pub-journal italic">MSc Thesis, University of Twente, Enschede, The Netherlands.</p>
           </div>
         </div>
-
       </div>
 
       <div class="scholar-cta">
@@ -420,19 +462,22 @@
     </div>
   </section>
 
-  <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
-  <footer class="footer">
+  <!-- ─── FOOTER with office location & contact info ─────────────────────── -->
+  <footer class="footer" id="contact-info">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-logo mono">Atikul Hoque</div>
           <p>PhD Candidate · Geography &amp; Environmental Studies<br />New Mexico State University</p>
-          <p class="mono" style="font-size:0.75rem;margin-top:0.5rem;">atikul@nmsu.edu</p>
+          <div class="contact-block">
+            <span>📍 Breland Hall 178, New Mexico State University</span><br />
+            <span>📧 <a href="mailto:atikul@nmsu.edu" style="color: #e0e0e0; text-decoration: none;">atikul@nmsu.edu</a></span>
+          </div>
         </div>
         <div class="footer-links">
           <a href="https://scholar.google.com/citations?user=0AgT_FwAAAAJ&hl=en" target="_blank">Google Scholar</a>
           <a href="https://linkedin.com/in/atikulhoq/" target="_blank">LinkedIn</a>
-          <a href="mailto:atikul@nmsu.edu">Email</a>
+          <a href="#contact-info">Contact</a>
         </div>
       </div>
       <div class="footer-bottom mono">
